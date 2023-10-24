@@ -84,9 +84,9 @@ int RandomMapCreator::parseMapFile(std::string fileName)
 
     assert(segments["size"] == "7x7");
     segments_w = 7, segments_h = 7;
-    size_string = segments["size"];
+    type = segments["type"];
 
-    const std::string segmentsFolderPath = "assets/maps/segments/" + size_string;
+    const std::string segmentsFolderPath = "assets/maps/segments/" + type;
     int seg_count = 0;
     int segments_num_w = map_w / segments_w;
     int segments_num_h = map_h / segments_h;

@@ -100,6 +100,9 @@ void SoundPlayer::playSound(SoundPlayer::SoundType type)
         case iceSkid:
             playIceSkidSound();
             break;
+        case TitleTheme:
+            playTitleTheme();
+            break;
         case BossTheme:
             playBossTheme();
             break;
@@ -188,6 +191,16 @@ void SoundPlayer::playBossTheme()
 void SoundPlayer::playShopTheme()
 {
     auto& shopMusic = loadedSounds.at(ShopTheme).second;
+    sf::SoundSource::Status moveStatus = shopMusic.getStatus();
+    if (moveStatus != sf::SoundSource::Status::Playing) {
+        shopMusic.setLoop(true);
+        shopMusic.play();
+    }
+}
+
+void SoundPlayer::playTitleTheme()
+{
+    auto& shopMusic = loadedSounds.at(TitleTheme).second;
     sf::SoundSource::Status moveStatus = shopMusic.getStatus();
     if (moveStatus != sf::SoundSource::Status::Playing) {
         shopMusic.setLoop(true);

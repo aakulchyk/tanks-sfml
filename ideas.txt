@@ -1,3 +1,5 @@
+C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/cl.exe
+
 Main idea: crossover of Battle City and Vampire Survivors
 
 Gameplay:

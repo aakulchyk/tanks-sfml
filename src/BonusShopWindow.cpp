@@ -303,6 +303,7 @@ void BonusShopWindow::getSelectedUpgrade()
             PersistentGameData::instance().subtractFromDeposit(upgrade->price());
             PlayerUpgrade::playerOwnedPerks.insert(perkType);
             SoundPlayer::instance().playSound(SoundPlayer::SoundType::Shoot);
+            upgrade->reset();
         } else {
             // if cannot afford
             SoundPlayer::instance().playSound(SoundPlayer::SoundType::iceSkid);

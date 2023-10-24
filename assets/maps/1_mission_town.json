@@ -13,6 +13,7 @@
     "map": {
         "width" : 21,
         "height" : 21,
+        "type" : "town",
         "segments" : {
             "size" : "7x7",
             "variants" : {

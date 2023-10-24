@@ -74,6 +74,7 @@ public:
     void stopAllSounds();
     void playTankStandSound();
     void playTankMoveSound();
+    void playTitleTheme();
     void playBossTheme();
     void playShopTheme();
 
